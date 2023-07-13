@@ -30,6 +30,8 @@ Test the product you added to the cart
         homePage.cookies.click();
 
 //        search for any product
+
+
 //        click on the first product on page 2 of the search results
 //        add to cart
 //        Test the product you added to the cart
