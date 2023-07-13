@@ -1,5 +1,6 @@
 package cw.tests;
 
+import cw.pages.TrendyolBasePage;
 import cw.pages.TrendyolHomePage;
 import cw.utilities.ConfigurationReader;
 import cw.utilities.Driver;
@@ -26,15 +27,14 @@ Test the product you added to the cart
         Driver.getDriver().get(ConfigurationReader.getProperty("trendyolUrl"));
 
         //click cookies..
-        TrendyolHomePage homePage=new TrendyolHomePage();
-
-        homePage.cookiesAccept();
+        TrendyolBasePage basePage=new TrendyolBasePage();
+        basePage.cookiesAccept();
 
 //        search for any product..
-        homePage.searchProduct("Schuhe");
+        basePage.searchProduct("Schuhe");
 
 //        close rabatt-window..
-        homePage.rabattWE.click();
+        basePage.rabattWE.click();
 
 
 //        click on the first product on page 2 of the search results
