@@ -23,6 +23,11 @@ public class TrendyolBasePage {
     @FindBy(xpath = "//img[@class='basket-icon']")
     public WebElement basketIcon;
 
+    @FindBy(className = "p-icon icon-close close-icon")
+    public WebElement rabattWE;
+
+
+
 
     public void searchProduct(String product){
 
