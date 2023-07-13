@@ -14,8 +14,11 @@ public class TrendyolBasePage {
     }
 
 
-    @FindBy(xpath = "//button[.='Akzeptieren']")
-    public WebElement cookies;
+//    @FindBy(xpath = "//button[.='Alle akzeptieren']")
+//    public WebElement cookies;
+
+    @FindBy(xpath = "//button[@id='onetrust-accept-btn-handler']")
+    WebElement cookies;
 
     @FindBy(xpath = "//input[@class='search-bar']")
     public WebElement searchArea;
@@ -29,10 +32,19 @@ public class TrendyolBasePage {
 
 
 
+    public void cookiesAccept(){
+        cookies.click();
+
+    }
+
     public void searchProduct(String product){
 
         searchArea.sendKeys(product+ Keys.ENTER);
 
+    }
+
+    public void alertDismiss(){
+        Driver.getDriver().switchTo().alert().dismiss();
     }
 
 
