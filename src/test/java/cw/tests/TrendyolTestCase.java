@@ -3,6 +3,7 @@ package cw.tests;
 import cw.pages.TrendyolHomePage;
 import cw.utilities.ConfigurationReader;
 import cw.utilities.Driver;
+import cw.utilities.ReusableMethods;
 import org.testng.annotations.Test;
 
 public class TrendyolTestCase {
@@ -19,15 +20,19 @@ Test the product you added to the cart
      */
 
 
+
+
+
+
     @Test
     public void test() {
 
-        //go trendyol..
-        Driver.getDriver().get(ConfigurationReader.getProperty("trendyolUrl"));
-
         //click cookies..
         TrendyolHomePage homePage = new TrendyolHomePage();
-        homePage.accept();
+
+        ReusableMethods.waitForClickablility(homePage.cookies, 10);
+
+        homePage.cookies.click();
 
 //        search for any product..
         homePage.searchProduct("Schuhe");

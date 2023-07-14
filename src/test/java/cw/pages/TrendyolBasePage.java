@@ -1,5 +1,6 @@
 package cw.pages;
 
+import cw.utilities.ConfigurationReader;
 import cw.utilities.Driver;
 import cw.utilities.TestBase;
 import org.openqa.selenium.By;
@@ -13,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 
-public class TrendyolBasePage extends TestBase {
+public class TrendyolBasePage {
 
 
     public TrendyolBasePage() {
@@ -37,13 +38,9 @@ public class TrendyolBasePage extends TestBase {
     public WebElement rabattWE;
 
     public void accept() {
-//        driver.get("https://www.trendyol.com/");
-//        driver.manage().window().maximize();
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(3));
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(cookies));
-        Driver.getDriver();
-        driver.findElement(By.xpath("//*[@id=\"onetrust-accept-btn-handler\"]")).click();
-        driver.close();
+        cookies.click();
     }
 
 
