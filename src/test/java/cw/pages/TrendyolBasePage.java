@@ -23,7 +23,8 @@ public class TrendyolBasePage {
 //    @FindBy(xpath = "//button[.='Alle akzeptieren']")
 //    public WebElement cookies;
 
-    @FindBy(xpath = "//button[@id='onetrust-accept-btn-handler']")
+    @FindBy(xpath = "//*[@id='onetrust-accept-btn-handler']")
+
     public WebElement cookies;
 
     @FindBy(xpath = "//input[@class='search-bar']")
