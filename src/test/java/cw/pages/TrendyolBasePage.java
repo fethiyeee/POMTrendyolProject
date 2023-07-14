@@ -37,29 +37,12 @@ public class TrendyolBasePage {
     @FindBy(className = "p-icon icon-close close-icon")
     public WebElement rabattWE;
 
-    public void accept() {
+    public void cookiesAccept() {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(cookies));
         cookies.click();
     }
 
-
-
-/*
-    public void cookiesAccept(){
-
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(cookies));
-
-        Driver.getDriver();
-        Driver.switchTo().frame(2);
-
-
-        cookies.click();
-
-    }
-
- */
 
     public void searchProduct(String product) {
 
