@@ -27,14 +27,13 @@ Test the product you added to the cart
         Driver.getDriver().get(ConfigurationReader.getProperty("trendyolUrl"));
 
         //click cookies..
-        TrendyolBasePage basePage=new TrendyolBasePage();
-        basePage.cookiesAccept();
+        TrendyolHomePage homePage=new TrendyolHomePage();
 
 //        search for any product..
-        basePage.searchProduct("Schuhe");
+        homePage.searchProduct("Schuhe");
 
 //        close rabatt-window..
-        basePage.rabattWE.click();
+        homePage.rabattWE.click();
 
 
 //        click on the first product on page 2 of the search results
