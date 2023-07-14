@@ -22,11 +22,12 @@ Test the product you added to the cart
     @Test
     public void test() {
 
-        //go trendy..
+        //go trendyol..
         Driver.getDriver().get(ConfigurationReader.getProperty("trendyolUrl"));
 
         //click cookies..
         TrendyolHomePage homePage = new TrendyolHomePage();
+        homePage.accept();
 
 //        search for any product..
         homePage.searchProduct("Schuhe");
