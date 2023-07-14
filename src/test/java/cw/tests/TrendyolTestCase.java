@@ -29,7 +29,7 @@ Test the product you added to the cart
         //click cookies..
         TrendyolHomePage homePage = new TrendyolHomePage();
 
-        homePage.accept();
+        homePage.cookiesAccept();
 
 //        search for any product..
         homePage.searchProduct("Schuhe");

@@ -1,9 +1,7 @@
 package cw.pages;
 
-import cw.utilities.ConfigurationReader;
+
 import cw.utilities.Driver;
-import cw.utilities.TestBase;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
