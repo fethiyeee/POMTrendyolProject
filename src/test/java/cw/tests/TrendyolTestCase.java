@@ -35,9 +35,9 @@ Test the product you added to the cart
         //click cookies..
         // TrendyolHomePage homePage = new TrendyolHomePage();
 
-        WebElement cookies = driver.findElement(By.xpath("//button[.='Alle akzeptieren']"));
+        WebElement cookies = driver.findElement(By.xpath("//*[@id='onetrust-accept-btn-handler']"));
 
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(cookies));
 
         cookies.click();
