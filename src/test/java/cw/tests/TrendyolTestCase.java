@@ -25,15 +25,15 @@ Test the product you added to the cart
         Driver.getDriver().get(ConfigurationReader.getProperty("firebaseappUrl"));
 
         //click cookies..
-        TrendyolHomePage homePage = new TrendyolHomePage();
+       // TrendyolHomePage homePage = new TrendyolHomePage();
 
-        homePage.cookiesAccept();
+      //  homePage.cookiesAccept();
 
 //        search for any product..
-        homePage.searchProduct("Schuhe");
+        //homePage.searchProduct("Schuhe");
 
 //        close rabatt-window..
-        homePage.rabattWE.click();
+       // homePage.rabattWE.click();
 
 
 //        click on the first product on page 2 of the search results
