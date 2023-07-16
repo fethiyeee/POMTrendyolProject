@@ -3,8 +3,6 @@ package cw.tests;
 import cw.pages.TrendyolHomePage;
 import cw.utilities.ConfigurationReader;
 import cw.utilities.Driver;
-import cw.utilities.ReusableMethods;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 public class TrendyolTestCase {
@@ -24,7 +22,7 @@ Test the product you added to the cart
     @Test
     public void test() {
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("trendyolUrl"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("firebaseappUrl"));
 
         //click cookies..
         TrendyolHomePage homePage = new TrendyolHomePage();

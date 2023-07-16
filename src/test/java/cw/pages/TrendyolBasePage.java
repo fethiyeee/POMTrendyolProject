@@ -20,12 +20,11 @@ public class TrendyolBasePage {
     }
 
 
-//    @FindBy(xpath = "//button[.='Alle akzeptieren']")
-//    public WebElement cookies;
-
-    @FindBy(xpath = "//*[@id='onetrust-accept-btn-handler']")
-
+    @FindBy(xpath = "//button[.='Alle akzeptieren']")
     public WebElement cookies;
+
+//    @FindBy(xpath = "//*[@id='onetrust-accept-btn-handler']")
+//    public WebElement cookies;
 
     @FindBy(xpath = "//input[@class='search-bar']")
     public WebElement searchArea;
@@ -37,8 +36,8 @@ public class TrendyolBasePage {
     public WebElement rabattWE;
 
     public void cookiesAccept() {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(cookies));
+//        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+//        wait.until(ExpectedConditions.visibilityOf(cookies));
         cookies.click();
     }
 
