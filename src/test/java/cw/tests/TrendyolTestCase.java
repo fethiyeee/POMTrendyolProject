@@ -1,5 +1,6 @@
 package cw.tests;
 
+import cw.pages.TrendyolBasePage;
 import cw.pages.TrendyolHomePage;
 import cw.utilities.ConfigurationReader;
 import cw.utilities.Driver;
@@ -22,10 +23,14 @@ Test the product you added to the cart
     @Test
     public void test() {
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("firebaseappUrl"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("trendyolUrl"));
 
         //click cookies..
        // TrendyolHomePage homePage = new TrendyolHomePage();
+
+        TrendyolBasePage basePage=new TrendyolBasePage();
+
+        basePage.cookiesAccept();
 
       //  homePage.cookiesAccept();
 
