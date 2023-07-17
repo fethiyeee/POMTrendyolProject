@@ -32,7 +32,7 @@ public class TrendyolTestCase {
         // arama sonuclarındaki 2. sayfadaki ilk urune tiklayin
         TrendyolSearchPage searchPage = new TrendyolSearchPage();
 
-        searchPage.werbungClose();
+      //  searchPage.werbungClose();
         searchPage.selectingProduct(1);
 
         // sepete ekleyin
