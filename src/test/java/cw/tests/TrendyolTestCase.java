@@ -1,63 +1,55 @@
 package cw.tests;
 
-import cw.pages.TrendyolBasePage;
+
+import cw.pages.TrendyolCartPage;
 import cw.pages.TrendyolHomePage;
+import cw.pages.TrendyolProductPage;
+import cw.pages.TrendyolSearchPage;
 import cw.utilities.ConfigurationReader;
 import cw.utilities.Driver;
-import cw.utilities.TestBase;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
+public class TrendyolTestCase {
 
-public class TrendyolTestCase extends TestBase {
-
-
-
-    /*
-Install POM framework
-go trendy
-search for any product
-click on the first product on page 2 of the search results
-add to cart
-Test the product you added to the cart
-     */
-
+    // trendyola gidin
+    // herhangi bir urunu arayin
+    // arama sonuclarındaki 2. sayfadaki ilk urune tiklayin
+    // sepete ekleyin
+    // sepete ekledigniz urunu test ediniz
 
     @Test
-    public void test() {
+    public void test() throws InterruptedException {
 
-        driver.get("https://www.trendyol.com/");
+        // https://www.trendyol.com a gidilir
+        Driver.getDriver().get(ConfigurationReader.getProperty("trendyolUrl"));
 
-        //click cookies..
-        // TrendyolHomePage homePage = new TrendyolHomePage();
+        // herhangi bir urunu arayin
+        TrendyolHomePage homePage = new TrendyolHomePage();
+        homePage.cookiesAkzeptClick();
+        homePage.search("schuhe");
 
-        WebElement cookies = driver.findElement(By.xpath("//*[@id='onetrust-accept-btn-handler']"));
+        // arama sonuclarındaki 2. sayfadaki ilk urune tiklayin
+        TrendyolSearchPage searchPage = new TrendyolSearchPage();
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(cookies));
+        searchPage.werbungClose();
+        searchPage.selectingProduct(1);
 
-        cookies.click();
+        // sepete ekleyin
+        TrendyolProductPage productPage = new TrendyolProductPage();
+        productPage.addToCart();
+        Thread.sleep(1000);
+
+        // sepete ekledigniz urunu test ediniz
+        TrendyolCartPage cartPage = new TrendyolCartPage();
+        cartPage.cart();
+        Thread.sleep(1000);
+
+        cartPage.cartList();
 
 
-        //  homePage.cookiesAccept();
-
-//        search for any product..
-        //homePage.searchProduct("Schuhe");
-
-//        close rabatt-window..
-        // homePage.rabattWE.click();
-
-
-//        click on the first product on page 2 of the search results
-//        add to cart
-//        Test the product you added to the cart
 
 
     }
-
-
 }
+
