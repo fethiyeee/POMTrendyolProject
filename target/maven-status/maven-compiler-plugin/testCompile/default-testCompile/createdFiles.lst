@@ -1,0 +1,8 @@
+cw\pages\TrendyolBasePage.class
+cw\utilities\ConfigurationReader.class
+cw\utilities\Driver.class
+cw\tests\TrendyolTestCase.class
+cw\pages\TrendyolCartPage.class
+cw\pages\TrendyolHomePage.class
+cw\pages\TrendyolSearchPage.class
+cw\pages\TrendyolProductPage.class
