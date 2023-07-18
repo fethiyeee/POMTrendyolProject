@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class ConfigurationReader {
 
-    public static Properties properties;   //Create Properties instance
+    public static Properties properties;
 
 
 
@@ -17,7 +17,6 @@ public class ConfigurationReader {
             FileInputStream fis=new FileInputStream(filePath);
             properties=new Properties();
             properties.load(fis);
-            //close the file
             fis.close();
         } catch (IOException e) {
             e.printStackTrace();

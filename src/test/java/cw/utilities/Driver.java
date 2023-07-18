@@ -11,13 +11,12 @@ import java.time.Duration;
 
 
 public class Driver {
-    // create a private static WebDriver object
+
     private static WebDriver driver;
 
-    private Driver() { //constructor Driver
+    private Driver() {
     }
 
-    // create getDriver method to create and initiate the driver instance
     public static WebDriver getDriver() {
         if (driver == null) {
             switch (ConfigurationReader.getProperty("browser")) {
@@ -44,9 +43,8 @@ public class Driver {
         return driver;
     }
 
-    // create a closeDriver method to close the driver
+
     public static void closeDriver() {
-        //   quit the driver id it is pointing chromedriver, firefoxdriver....
         if (driver != null) {
             driver.quit();
             driver = null;
