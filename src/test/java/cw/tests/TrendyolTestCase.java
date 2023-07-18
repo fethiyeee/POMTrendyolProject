@@ -12,42 +12,43 @@ import org.testng.annotations.Test;
 
 public class TrendyolTestCase {
 
-    // trendyola gidin
-    // herhangi bir urunu arayin
-    // arama sonuclarındaki 2. sayfadaki ilk urune tiklayin
-    // sepete ekleyin
-    // sepete ekledigniz urunu test ediniz
+   /*
+     go to trendyol
+     search for any product
+     click on the second product on page of the search results
+     add to cart
+     test the product you added to the cart
+
+    */
 
     @Test
     public void test() throws InterruptedException {
 
-        // https://www.trendyol.com a gidilir
+        // go to trendyol
         Driver.getDriver().get(ConfigurationReader.getProperty("trendyolUrl"));
 
-        // herhangi bir urunu arayin
+        // search for any product
         TrendyolHomePage homePage = new TrendyolHomePage();
         homePage.cookiesAkzeptClick();
-        homePage.search("schuhe");
+        homePage.search("skirt");
 
-        // arama sonuclarındaki 2. sayfadaki ilk urune tiklayin
+        //click on the second product on page of the search results
         TrendyolSearchPage searchPage = new TrendyolSearchPage();
 
-      //  searchPage.werbungClose();
+        //  searchPage.werbungClose();
         searchPage.selectingProduct(1);
 
-        // sepete ekleyin
+        // add to cart
         TrendyolProductPage productPage = new TrendyolProductPage();
         productPage.addToCart();
         Thread.sleep(1000);
 
-        // sepete ekledigniz urunu test ediniz
+        // test the product you added to the cart
         TrendyolCartPage cartPage = new TrendyolCartPage();
         cartPage.cart();
         Thread.sleep(1000);
 
         cartPage.cartList();
-
-
 
 
     }
