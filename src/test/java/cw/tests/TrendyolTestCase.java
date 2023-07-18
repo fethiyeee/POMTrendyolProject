@@ -13,37 +13,35 @@ import org.testng.annotations.Test;
 public class TrendyolTestCase {
 
    /*
-     go to trendyol
-     search for any product
-     click on the second product on page of the search results
-     add to cart
-     test the product you added to the cart
+    Gehen Sie zu trendyol
+    Suchen Sie nach einem beliebigen Produkt
+    Klicken Sie auf das zweite Produkt auf Seite  Suchergebnisse
+    Fügen Sie das Produkt in den Warenkorb hinzu
+    Testen Sie das Produkt, das Sie dem Warenkorb hinzugefügt haben
 
     */
 
     @Test
     public void test() throws InterruptedException {
 
-        // go to trendyol
+        // Gehen Sie zu trendyol
         Driver.getDriver().get(ConfigurationReader.getProperty("trendyolUrl"));
 
-        // search for any product
+        // Suchen Sie nach einem beliebigen Produkt
         TrendyolHomePage homePage = new TrendyolHomePage();
         homePage.cookiesAkzeptClick();
         homePage.search("skirt");
 
-        //click on the second product on page of the search results
+        // Klicken Sie auf das zweite Produkt auf Seite  Suchergebnisse
         TrendyolSearchPage searchPage = new TrendyolSearchPage();
-
-        //  searchPage.werbungClose();
         searchPage.selectingProduct(1);
 
-        // add to cart
+        // Fügen Sie das Produkt in den Warenkorb hinzu
         TrendyolProductPage productPage = new TrendyolProductPage();
         productPage.addToCart();
         Thread.sleep(1000);
 
-        // test the product you added to the cart
+        // Testen Sie das Produkt, das Sie dem Warenkorb hinzugefügt haben
         TrendyolCartPage cartPage = new TrendyolCartPage();
         cartPage.cart();
         Thread.sleep(1000);
