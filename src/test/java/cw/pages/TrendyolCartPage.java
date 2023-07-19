@@ -20,9 +20,9 @@ public class TrendyolCartPage extends TrendyolBasePage {
     public void cartList() {
         for (WebElement element : checkboxCart) {
             if(element.isSelected()) {
-                System.out.println("ürün sepette eklidir");
+                System.out.println("Das Produkt wird dem Warenkorb hinzugefügt");
                 break;
-            }   else System.out.println("ürün sepette ekli degildir");     }
+            }   else System.out.println("Das Produkt wird dem Warenkorb nicht hinzugefügt");     }
     }
 
 }

@@ -34,7 +34,7 @@ public class TrendyolTestCase {
         homePage.cookiesAkzeptClick();
         homePage.search("T-shirt");
 
-        // Klicken Sie auf das zweite Produkt auf Seite  Suchergebnisse
+        // Klicken Sie auf das zweite Produkt auf Seite Suchergebnisse
         TrendyolSearchPage searchPage = new TrendyolSearchPage();
         searchPage.selectingProduct(1);
 
@@ -53,6 +53,10 @@ public class TrendyolTestCase {
 
         //Screenshot des Warenkorbs
         Driver.takeScreenShot("TrendyolTest");
+
+
+        //das Fenster schließen..
+        Driver.getDriver().close();
 
     }
 }

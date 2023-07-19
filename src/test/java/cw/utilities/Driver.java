@@ -59,6 +59,11 @@ public class Driver {
         return filePath;
     }
 
+    public static void allureReportScreenshot() {
+        //Driver.getDriver().get(ConfigurationReader.getProperty());
+       // DriverManager.takeScreenshot("allure_report");
+    }
+
     public static void closeDriver() {
         if (driver != null) {
             driver.quit();
