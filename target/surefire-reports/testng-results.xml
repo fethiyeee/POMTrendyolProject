@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-18T10:39:18 MESZ" name="Surefire suite" finished-at="2023-07-18T10:39:49 MESZ" duration-ms="30152">
+  <suite started-at="2023-07-19T10:58:51 MESZ" name="Surefire suite" finished-at="2023-07-19T10:59:21 MESZ" duration-ms="30032">
     <groups>
     </groups>
-    <test started-at="2023-07-18T10:39:18 MESZ" name="Surefire test" finished-at="2023-07-18T10:39:49 MESZ" duration-ms="30152">
+    <test started-at="2023-07-19T10:58:51 MESZ" name="Surefire test" finished-at="2023-07-19T10:59:21 MESZ" duration-ms="30032">
       <class name="cw.tests.TrendyolTestCase">
-        <test-method signature="test()[pri:0, instance:cw.tests.TrendyolTestCase@518caac3]" started-at="2023-07-18T10:39:18 MESZ" name="test" finished-at="2023-07-18T10:39:49 MESZ" duration-ms="30061" status="PASS">
+        <test-method signature="test()[pri:0, instance:cw.tests.TrendyolTestCase@518caac3]" started-at="2023-07-19T10:58:51 MESZ" name="test" finished-at="2023-07-19T10:59:21 MESZ" duration-ms="29950" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->

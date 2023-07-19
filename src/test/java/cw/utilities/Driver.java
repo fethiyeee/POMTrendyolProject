@@ -52,17 +52,12 @@ public class Driver {
 
     public static String takeScreenShot(String name) throws IOException {
         TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
-
         File source = ts.getScreenshotAs(OutputType.FILE);
-
         String filePath = ".\\test-output\\Screenshots\\" + name + new SimpleDateFormat("yyyy-MM-dd-hh-mm-ss").format(new Date()) + ".png";
-
-
         FileUtils.copyFile(source, new File(filePath));
 
         return filePath;
     }
-
 
     public static void closeDriver() {
         if (driver != null) {
@@ -71,3 +66,4 @@ public class Driver {
         }
     }
 }
+
