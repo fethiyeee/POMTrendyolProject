@@ -10,6 +10,8 @@ import cw.utilities.Driver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 public class TrendyolTestCase {
 
    /*
@@ -22,7 +24,7 @@ public class TrendyolTestCase {
     */
 
     @Test
-    public void test() throws InterruptedException {
+    public void test() throws InterruptedException, IOException {
 
         // Gehen Sie zu trendyol
         Driver.getDriver().get(ConfigurationReader.getProperty("trendyolUrl"));
@@ -47,6 +49,10 @@ public class TrendyolTestCase {
         Thread.sleep(1000);
 
         cartPage.cartList();
+
+
+        //Screenshot des Warenkorbs
+        Driver.takeScreenShot("TrendyolTest");
 
 
     }
