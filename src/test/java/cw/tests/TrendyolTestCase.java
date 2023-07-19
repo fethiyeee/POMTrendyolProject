@@ -54,6 +54,7 @@ public class TrendyolTestCase {
         //Screenshot des Warenkorbs
         Driver.takeScreenShot("TrendyolTest");
 
+        Thread.sleep(2000);
 
         //das Fenster schließen..
         Driver.getDriver().close();
