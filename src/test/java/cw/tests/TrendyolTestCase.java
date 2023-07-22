@@ -32,16 +32,21 @@ public class TrendyolTestCase {
         // Suchen Sie nach einem beliebigen Produkt
         TrendyolHomePage homePage = new TrendyolHomePage();
         homePage.cookiesAkzeptClick();
+
+        Thread.sleep(2000);
         homePage.search("T-shirt");
+
 
         // Klicken Sie auf das zweite Produkt auf Seite Suchergebnisse
         TrendyolSearchPage searchPage = new TrendyolSearchPage();
         searchPage.selectingProduct(1);
 
+        Thread.sleep(2000);
         // Fügen Sie das Produkt in den Warenkorb hinzu
         TrendyolProductPage productPage = new TrendyolProductPage();
         productPage.addToCart();
         Thread.sleep(1000);
+        Thread.sleep(2000);
 
         // Testen Sie das Produkt, das Sie dem Warenkorb hinzugefügt haben
         TrendyolCartPage cartPage = new TrendyolCartPage();
