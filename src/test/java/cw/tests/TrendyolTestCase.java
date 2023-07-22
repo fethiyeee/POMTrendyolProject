@@ -41,25 +41,21 @@ public class TrendyolTestCase {
         TrendyolSearchPage searchPage = new TrendyolSearchPage();
         searchPage.selectingProduct(1);
 
-        Thread.sleep(2000);
         // Fügen Sie das Produkt in den Warenkorb hinzu
         TrendyolProductPage productPage = new TrendyolProductPage();
         productPage.addToCart();
         Thread.sleep(1000);
-        Thread.sleep(2000);
+
 
         // Testen Sie das Produkt, das Sie dem Warenkorb hinzugefügt haben
         TrendyolCartPage cartPage = new TrendyolCartPage();
         cartPage.cart();
         Thread.sleep(1000);
-
         cartPage.cartList();
 
 
         //Screenshot des Warenkorbs
         Driver.takeScreenShot("TrendyolTest");
-
-        Thread.sleep(2000);
 
         //das Fenster schließen..
         Driver.getDriver().close();
